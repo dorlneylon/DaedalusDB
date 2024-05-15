@@ -29,7 +29,7 @@ RUN apt-get update && \
 
 ADD ./src /ddb/src
 ADD ./tests /ddb/tests
-ADD ./benches /ddb/benches
+# ADD ./benches /ddb/benches
 ADD ./CMakeLists.txt /ddb/CMakeLists.txt
 ADD ./Makefile /ddb/Makefile
 
@@ -50,7 +50,6 @@ FROM ubuntu:latest as run
 
 RUN apt-get update -y && \
     apt-get install -y libc++-dev
-
 
 RUN groupadd -r usermode && useradd -r -g usermode usermode
 WORKDIR /ddb

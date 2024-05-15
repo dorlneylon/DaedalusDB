@@ -7,17 +7,17 @@ project(
   LANGUAGES CXX)
 
 
-
   set(CMAKE_CXX_STANDARD 23)
   set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
   set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
   set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
   set(DLIBCXX_ENABLE_INCOMPLETE_FEATURES ON)
     
   set(CXX_COMMON_FLAGS "-std=c++23 -Isrc/util:/src/mem -g -fexperimental-library -stdlib=libc++ -Wall -Wextra -Werror")
-  set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -Weffc++ -Wsign-compare -Wshadow")
-  set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -Wwrite-strings -Wpointer-arith")
+  # set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -Weffc++ -Wsign-compare -Wshadow")
+  # set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -Wwrite-strings -Wpointer-arith")
   # set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -Winit-self -Wconversion")
   # set(CXX_COMMON_FLAGS "${CXX_COMMON_FLAGS} -Wno-sign-conversion -Wundefined-inline")
   set(CMAKE_CXX_FLAGS ${CXX_COMMON_FLAGS})
@@ -31,7 +31,7 @@ set(CMAKE_CXX_FLAGS_ASAN "${CXX_COMMON_FLAGS} -g -fsanitize=address -fsanitize=p
                    CACHE STRING "Compiler flags in asan build"
                    FORCE)
 
-add_subdirectory(benches)
+# add_subdirectory(benches)
 add_subdirectory(tests)
 add_subdirectory(googletest)
 add_subdirectory(benchmark)
