@@ -14,6 +14,7 @@ TEST(ValNodeStorage, NodeAddition) {
 }
 
 TEST(ValNodeStorage, NodeAddditionWithAllocation) {
+    // JUNK
     auto coords =
         ts::NewClass<ts::StructClass>("coords", ts::NewClass<ts::PrimitiveClass<double>>("lat"),
                                       ts::NewClass<ts::PrimitiveClass<double>>("lon"));
