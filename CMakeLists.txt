@@ -24,15 +24,17 @@ project(
   
   set(PROJECT_ARTIFACT_APP ${PROJECT_NAME})
   set(PROJECT_ARTIFACT_TEST "${PROJECT_NAME}-test")
+  set(PROJECT_ARTIFACT_PERFOMANCE_BENCH "${PROJECT_NAME}-bench")
   
 
 set(CMAKE_CXX_FLAGS_ASAN "${CXX_COMMON_FLAGS} -g -fsanitize=address -fsanitize=pointer-compare -fsanitize=pointer-subtract -fsanitize=leak -fsanitize=undefined -fsanitize-address-use-after-scope"
                    CACHE STRING "Compiler flags in asan build"
                    FORCE)
 
-         
+add_subdirectory(benches)
 add_subdirectory(tests)
 add_subdirectory(googletest)
+add_subdirectory(benchmark)
 
 include_directories(src)
 include_directories(src/util)

@@ -146,7 +146,7 @@ GTest were used for testing, only Smoke tests were made so any API testing PRs a
 
 Insertion of simple elements.
 
-![Insert plot](./tests/test_results/Insert.png) 
+![Insert plot](./benches/benches_results/Insert.png) 
 
 Time complexity: **O(1)**
 
@@ -154,9 +154,9 @@ Time complexity: **O(1)**
 
 Removal of valued size and variable sized objects into database. The Logic of Iterators are little bit different and Valued sized Objects Storage had some optimizations hence the performance could be different.
 
-![RemoveVal plot](./tests/test_results/RemoveVal.png) 
+![RemoveVal plot](./benches/benches_results/RemoveVal.png) 
 
-![RemoveVar plot](./tests/test_results/RemoveVar.png) 
+![RemoveVar plot](./benches/benches_results/RemoveVar.png) 
 
 Time complexity: **O(|A|)** where A is set of elements of certain class.
 
@@ -165,13 +165,13 @@ Time complexity: **O(|A|)** where A is set of elements of certain class.
 
 The database some primitive file compression mechanism implemented so filesize is linear to the overall number of elements.
 
-![RemoveVar plot](./tests/test_results/Compression.png) 
+![RemoveVar plot](./benches/benches_results/Compression.png) 
 
 ## Match
 
 Here is some performance test for Pattern Matching of simple pattern (see *performance_test.cpp*). Time complexity analysis is pretty complex so I left it for future, but it definitely depends on number of verticies and edges. 
 
-![RemoveVar plot](./tests/test_results/Match.png) 
+![RemoveVar plot](./benches/benches_results/Match.png) 
 
 ___
 

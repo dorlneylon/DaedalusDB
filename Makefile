@@ -27,6 +27,9 @@ compile-release: configure-release
 test: 
 	./build$(TYPE)/$(TARGET)-test --gtest_filter="$(TEST).*"
 
+bench:
+	./build$(TYPE)/$(TARGET)-bench  --benchmark_out=benches/benches_result.csv --benchmark_out_format=csv
+
 perf: compile-release
 	./build-release/$(TARGET)-test --gtest_filter="Performance.$(TEST)" 2> $(TEST).csv
 	python3 ./tests/performance.py $(TEST)
