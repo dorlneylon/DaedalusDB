@@ -35,6 +35,7 @@ ADD ./Makefile /ddb/Makefile
 WORKDIR /ddb/
 
 RUN git clone https://github.com/google/googletest.git
+RUN git clone https://github.com/google/benchmark.git
 
 RUN ls -l
 RUN ls /usr/bin/ 
