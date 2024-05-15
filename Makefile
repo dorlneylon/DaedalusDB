@@ -24,7 +24,7 @@ compile-release: configure-release
 	cmake --build build-release
 	cp build-release/compile_commands.json compile_commands.json
 
-test: 
+test:
 	./build$(TYPE)/$(TARGET)-test --gtest_filter="$(TEST).*"
 
 bench:

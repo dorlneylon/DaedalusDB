@@ -49,6 +49,7 @@ static void PerfomanceRemoveByValue(benchmark::State& state) {
         database.AddClass(age);
 
         int64_t size = state.range(0);
+        
         for (int64_t i = 0; i < size; ++i) {
             database.AddNode(ts::New<ts::Primitive<int>>(age, 100'000));
             database.AddNode(ts::New<ts::String>(name, "test name"));
