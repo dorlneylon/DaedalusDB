@@ -34,7 +34,7 @@ set(CMAKE_CXX_FLAGS_ASAN "${CXX_COMMON_FLAGS} -g -fsanitize=address -fsanitize=p
 # add_subdirectory(benches)
 add_subdirectory(tests)
 add_subdirectory(googletest)
-add_subdirectory(benchmark)
+# add_subdirectory(benchmark)
 
 include_directories(src)
 include_directories(src/util)
