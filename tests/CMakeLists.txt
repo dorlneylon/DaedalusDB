@@ -10,7 +10,7 @@ target_include_directories(${PROJECT_ARTIFACT_TEST} PRIVATE "../src/util")
 target_include_directories(${PROJECT_ARTIFACT_TEST} PRIVATE "../src/type_system")
 
 
-target_link_libraries(${PROJECT_ARTIFACT_TEST} gtest_main gmock_main benchmark)
+target_link_libraries(${PROJECT_ARTIFACT_TEST} gtest_main gmock_main)
 target_include_directories(${PROJECT_ARTIFACT_TEST} PRIVATE "../googletest/googletest/googlemock/include/gmock")
 target_include_directories(${PROJECT_ARTIFACT_TEST} PRIVATE "../googletest/googletest/googlemock/include/gtest")
 # target_include_directories(${PROJECT_ARTIFACT_TEST} PRIVATE "../benchmark/include/benchmark")
